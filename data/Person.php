@@ -9,7 +9,7 @@ class Person
     function sayHello(?string $name = null)
     {
         if (is_null($name)) {
-            echo "Ini null, nama saya $this->name" . PHP_EOL;
+            echo "Ini null, nama saya $this->name" . PHP_EOL; //$this digunakan untuk akses objek saat ini dimana function berada
         } else {
             echo "ini $name, nama saya $this->name" . PHP_EOL;
         }
