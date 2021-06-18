@@ -7,6 +7,13 @@ class Person
     var ?string $adress; // tambahkan ? untuk membolehkan value $adress = null
     var $country = "Indonesia"; // default value nya = Indonesia
 
+    function __construct(string $name, ?string $adress)
+    // jika di dalam construct ada argument, saat memanggil objek wajib memasukkan argumen juga
+    {
+        $this->name = $name;
+        $this->adress = $adress;
+    }
+
     function sayHello(?string $name = null)
     {
         echo "Author : " . self::AUTHOR . PHP_EOL; //mengakses konstan didalam class itu sendiri gunakan "self"
