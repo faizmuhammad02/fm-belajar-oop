@@ -2,7 +2,7 @@
 
 require_once "data/Animal.php";
 
-use Data\{Animal, Cat, Dog};
+use Data\{Cat, Dog};
 
 $cat = new Cat();
 $cat->name = "Luna";
