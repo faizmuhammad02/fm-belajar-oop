@@ -24,6 +24,12 @@ class Company
 }
 
 function sayHelloProgrammer(Programmer $programmer)
-{
-    echo "Hello Programmer $programmer->name" . PHP_EOL;
+{ // instanceof digunakan untuk mengecek objek mana yang dipakai
+    if ($programmer instanceof BackendProgrammer) { // $programmer adalah objek di backendprogrammer
+        echo "Hello Backend Programmer $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof FrontendProgrammer) {
+        echo "Hello Frontend Programmer $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof Programmer) {
+        echo "Hello Programmer $programmer->name" . PHP_EOL;
+    }
 }
